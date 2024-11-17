@@ -23,22 +23,18 @@ class TestCases {
 
     @Test
     void testNumberInput() {
-        // Simulate clicking "7"
         calculator.sevenbutton.doClick();
         assertEquals("7", calculator.DisplayLabel.getText());
 
-        // Simulate clicking "8"
         calculator.eightbutton.doClick();
         assertEquals("78", calculator.DisplayLabel.getText());
 
-        // Simulate clicking "9"
         calculator.ninebutton.doClick();
         assertEquals("789", calculator.DisplayLabel.getText());
     }
 
     @Test
     void testAddition() {
-        // Simulate entering "5 + 3 ="
         calculator.sevenbutton.doClick();
         calculator.plusbutton.doClick();
         calculator.threebutton.doClick();
@@ -50,7 +46,6 @@ class TestCases {
 
     @Test
     void testSubtraction() {
-        // Simulate entering "9 - 4 ="
         calculator.ninebutton.doClick();
         calculator.minbutton.doClick();
         calculator.fourbutton.doClick();
@@ -62,7 +57,6 @@ class TestCases {
 
     @Test
     void testMultiplication() {
-        // Simulate entering "6 x 7 ="
         calculator.sixbutton.doClick();
         calculator.mulbutton.doClick();
         calculator.sevenbutton.doClick();
@@ -74,7 +68,6 @@ class TestCases {
 
     @Test
     void testDivision() {
-        // Simulate entering "8 / 2 ="
         calculator.eightbutton.doClick();
         calculator.subbutton.doClick();
         calculator.twobutton.doClick();
@@ -86,21 +79,17 @@ class TestCases {
 
     @Test
     void testClearFunctionality() {
-        // Simulate entering "123"
         calculator.onebutton.doClick();
         calculator.twobutton.doClick();
         calculator.threebutton.doClick();
 
-        // Clear the input
         calculator.clearbutton.doClick();
 
-        // Validate clearing
         assertEquals("", calculator.DisplayLabel.getText());
     }
 
     @Test
     void testDecimalInput() {
-        // Simulate entering "5.5 + 2.3 ="
         calculator.fivebutton.doClick();
         calculator.dotbutton.doClick();
         calculator.fivebutton.doClick();
@@ -110,19 +99,16 @@ class TestCases {
         calculator.threebutton.doClick();
         calculator.equelbutton.doClick();
 
-        // Validate result
         assertEquals("7.8", calculator.DisplayLabel.getText());
     }
 
     @Test
     void testDivisionByZero() {
-        // Simulate entering "5 / 0 ="
         calculator.fivebutton.doClick();
         calculator.subbutton.doClick();
         calculator.zerobutton.doClick();
         calculator.equelbutton.doClick();
 
-        // Validate result
         assertEquals("Infinity", calculator.DisplayLabel.getText());
     }
 }
